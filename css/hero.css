@@ -191,6 +191,7 @@ body{
 @media screen and (max-width:425px) {
     .hero .intro{
        width: 100%;
+       gap: 2rem;
     }
     .intro1{
         height: 60%;
