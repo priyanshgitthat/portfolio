@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+:root{
+    font-size: 62.5%;
+    --bg:#DDD;
+    --dark:#222;
+    --txthead: #ff7b00;
+}
+
+.dabba{
+    width: 100%;
+    height: 60vh;
+    padding: 2% 3%;
+    background-color: var(--txthead);
+}
+
+.dabba ol{
+    /* border: 2px solid white; */
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.dabba ol li{
+    height: 100%;
+    /* border: 2px solid red; */
+    width: 24%;
+    min-width: 220px;
+}
+
+.dabba ol li h1{
+    font-size: 2rem;
+    color: var(--dark);
+    text-transform: uppercase;
+
+}
+
+.dabba ol li:nth-child(1){
+    color:var(--dark) ;
+    font-size: 1.7rem;
+    padding: 0 2%;
+}
+
+#secondlist,#projectlist,#connectlist{
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid green; */
+    margin: 1rem 0 0 0;
+}
+
+#secondlist li,#projectlist li,#connectlist li{
+  width: 60%;
+  margin: 0;
+
+}
+
+#secondlist li a,#projectlist li a,#connectlist li a{
+    font-size: 1.7rem;
+    color: var(--bg);
+    text-transform: uppercase;
+    padding: .4rem 0;
+    transition: all .2s ease-in-out;
+    &:hover{
+        color:var(--dark);
+    }
+
+}
+
+@media  screen and (max-width:922px) {
+    .dabba{
+        height: 70vh;
+        padding: 3% 2%;
+        margin: 4rem 0 0 0 
+    }
+    .dabba ol{
+        display: grid;
+        grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
+        justify-content: unset;
+        height: 50vh;
+    }
+
+    .dabba ol li {
+        width: unset;
+    }
+}
+
+@media  screen and (max-width:605px) {
+    .dabba{
+        height: 90vh;
+    }
+}

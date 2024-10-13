@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+:root{
+    font-size: 62.5%;
+    --bg:#DDD;
+    --dark:#222;
+    --txthead: #ff7b00;
+}
+
+
+.about{
+    width: 100%;
+    min-height: 87.9vh;
+    box-shadow:  0 0 10px var(--dark);
+    margin:  0 auto;
+    padding-bottom: 2px;
+    padding: 0 5% 2px 5%;
+}
+
+.about h1{
+    border-bottom: 2px solid var(--dark);
+    width: 100%;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-size: 3.5rem;
+}
+
+.about h1 .me{
+    color: var(--txthead);
+}
+
+.about img{
+    display: block;
+    margin: 4rem auto 0 auto;
+    width: 280px;
+    height: 280px;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 2px solid var(--txthead);
+    box-shadow: 0 0 20px var(--dark);
+
+}
+
+
+
+.about #myname{
+    text-transform: capitalize;
+    color: var(--txthead);
+    font-size: 3rem;
+    text-align: center;
+    border: unset;
+    margin: 2rem auto;
+}
+
+.about p{
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0 2rem;
+}
+
+#check,.content,#show{
+    display: none;
+}
+
+#check:checked ~ .content{
+    display: block;
+}
+
+#check:checked ~ #show{
+    display: block;
+
+}
+
+#check:checked ~ #hide{
+    display: none;
+
+}
+
+.about .label{
+    background-color:white;
+    box-shadow: 8px 4px 10px var(--dark) ;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    padding: .1rem 2rem;
+    margin: 1rem auto;
+    border-radius: 2rem;
+    display: block;
+    width: 170px;
+    text-align: center;
+    transition: all .2s ease-in-out;
+    &:hover{
+        color: var(--bg);
+        background-color: var(--txthead);
+        scale: .9;
+    }
+}
+
+.about .btn{
+    /* border: 2px solid red; */
+    min-width: 320px;
+    max-width: 50%;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+}
+
+.btn a i{
+    color: var(--txthead);
+    font-size: 3rem;
+    margin: 0 1rem;
+    transition: all .2s ease-in-out;
+    &:hover{
+        scale: .9;
+        text-shadow: 0 0 10px white;
+    }
+}
+
+@media screen and (max-width:425px) {
+
+    .about img{
+        width: 240px;
+        height: 240px;
+    }
+    
+}

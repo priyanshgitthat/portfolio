@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+:root{
+    font-size: 62.5%;
+    --bg:#DDD;
+    --dark:#222;
+    --txthead: #ff5e00;
+    scroll-behavior: smooth;
+}
+
+/* ---------------------------------------------------- header of site ------------------------------------------- */
+
+header{
+    /* border: 2px solid red; */
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #dddddd9c;
+    backdrop-filter: blur(10px);
+    box-shadow: 2px 0 20px #22222248;
+}
+
+header img{
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    border-radius: 50px;
+    border: 2px solid var(--txthead);
+    box-shadow: 0 0 10px var(--dark);
+    &:hover{
+        scale: .9;
+    }
+}
+
+nav{
+    height: 100%;
+    display: flex;
+    gap: 1.8rem;
+}
+
+nav a{
+    color:#222;
+    text-transform: capitalize;
+    font-size: 2.4rem;
+    align-content: center;
+    font-weight: bold;
+    transition: all .2s ease-in-out;
+    position: relative;
+    &:hover{
+        color:var(--txthead);
+    }
+}
+
+nav a::before{
+    content: " ";
+    height: 2.5px;
+    width: 0;
+    background: linear-gradient(to left,var(--txthead),rgb(255, 187, 0));
+    position: absolute;
+    bottom: .7rem;
+    transition: all .2s ease-in;
+}
+
+nav a:hover::before{
+    width: 100%;
+}
+
+header .hammenu, .tick{
+    display: none;
+}
+
+header .tick i{
+    font-size: 2.2rem;
+    color: var(--dark);
+    &:hover{
+        color: var(--txthead);
+    }
+}
+
+.hammenu{
+    position: fixed;
+    z-index: 100;
+    top: 8vh;
+    right: -100%;
+    height: 88vh;
+    width: 90%;
+    background-color: var(--bg);
+    transition: all .2s ease-in-out;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    box-shadow: 0 0 11px var(--dark);
+
+}
+
+.hammenu.active{
+    right: 0;
+}
+
+.hammenu a{
+    text-align: center;
+    display: block;
+    text-transform: capitalize;
+    font-size: 2.2rem;
+    font-weight: 800;
+    padding: 2rem 0;
+    color: var(--dark);
+    transition: all .1s ease-in-out;
+    &:hover{
+        color: var(--txthead);
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    nav{
+        display: none;
+    }
+
+    header .hammenu,.tick{
+        display: block;
+    }
+}
