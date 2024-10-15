@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 :root{
@@ -12,6 +16,29 @@
     --dark:#222;
     --txthead: #ff5e00;
     scroll-behavior: smooth;
+}
+
+/* --------------------------------------------------- scroll indicator of the site ------------------------------ */
+.scrollparent{
+    width: 100%;
+    background-color: var(--bg);
+    height: 1vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 400;
+
+}
+
+#scroll{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 1vh;
+    z-index: 500;
+    background-color: var(--txthead);
+    box-shadow: 0 0 20px var(--txthead);
 }
 
 /* ---------------------------------------------------- header of site ------------------------------------------- */
@@ -25,7 +52,7 @@ header{
     justify-content: space-between;
     padding: 0 2%;
     position: fixed;
-    top: 0;
+    top: 1vh;
     left: 0;
     z-index: 100;
     background-color: #dddddd9c;
@@ -56,9 +83,8 @@ nav{
 nav a{
     color:#222;
     text-transform: capitalize;
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     align-content: center;
-    font-weight: bold;
     transition: all .2s ease-in-out;
     position: relative;
     &:hover{
@@ -115,8 +141,7 @@ header .tick i{
     text-align: center;
     display: block;
     text-transform: capitalize;
-    font-size: 2.2rem;
-    font-weight: 800;
+    font-size: 2.1rem;
     padding: 2rem 0;
     color: var(--dark);
     transition: all .1s ease-in-out;

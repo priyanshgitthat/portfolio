@@ -1,3 +1,14 @@
+//  ------------------ scroll indicator -------------
+
+window.onscroll = function(){
+    let html = document.documentElement;
+    let scrol_top = html.scrollTop;
+    let height = html.scrollHeight - html.clientHeight;
+
+    let unit = (scrol_top/height)*100;
+    document.getElementById("scroll").style.width = unit+ "%";
+}
+
 
 // code written for hamburger menu
 function menu(){

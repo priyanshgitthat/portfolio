@@ -15,13 +15,49 @@
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/last.css">
     <link rel="stylesheet" href="./fontawesome-free-6.5.2-web/css/all.min.css">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js" async></script>
+    <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <style>
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: scale(0.5); /* Shrinks and hidden initially */
+  }
+  to {
+    opacity: 1;
+    transform: scale(1); /* Fully visible and normal scale */
+  }
+}
+
+.block {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Ensure smooth transition */
+}
+
+.block.visible {
+  animation: appear 0.5s forwards; /* Trigger the appear animation */
+  opacity: 1;
+  transform: scale(1);
+}
+
+      </style>
 
 </head>
 
 <body>
+
+    <!-- -------------- scroll indicator ---------------------------------- -->
+    <div class="scrollparent">
+        <div class="scroll" id="scroll">
+    </div>
+
+
+    </div>
     <!-- --------------  header of the site ------------------------------  -->
     <header>
-        <a href=""><img src="./images/logo.png" alt=""></a>
+        <a href=""><img src="./images/intro.png" alt="" loading="lazy"></a>
 
         <nav>
             <a href="#hero">home</a>
@@ -46,7 +82,7 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <div class="hero" id="hero">
 
-        <div class="intro intro1">
+        <div class="intro intro1 block">
             <h1>
                 <span>hello, i am</span>
                 <span id="name">priyansh verma</span>
@@ -60,29 +96,29 @@
             <a href="#contact">hire me</a>
         </div>
 
-        <div class="intro intro2">
-            <img src="./images/intro.png" alt="">
+        <div class="intro intro2 block">
+            <img src="./images/file.png" alt="" loading="lazy">
         </div>
     </div>
 
     <!-- --------------- about of the site ------------------------------------- -->
     <div class="about" id="about">
         <input type="checkbox" name="" id="check">
-        <h1>
-            <i class="fa-solid fa-address-card"></i>
+        <h1 class="block">
+            <i class="fa-solid fa-address-card block"></i>
             about <span class="me">me</span>
         </h1>
         
 
-            <img src="./images/logo.png" alt="">
+            <img src="./images/about2.png" alt="" class="block" loading="lazy">
 
 
-        <h1 id="myname">priyansh verma</h1>
-        <p>
+        <h1 id="myname" class="block">priyansh verma</h1>
+        <p class="block">
             Remember those bulky computers from back in the day? Yeah, those were the ones that sparked my curiosity about the magic behind the screen. Now, juggling college (shoutout to MCA!) and building websites keeps me on my toes. You could say I'm a coding ninja – quiet and focused when the code editor's open, but with the skills to build awesome websites that come alive. Python's my trusty programming language, but.....
         </p>
 
-        <p class="content">
+        <p class="content block">
             I can speak C and Java fluently too. This website you're checking out? Built it myself, with some serious late-night coding sessions!
             <br><br>
             But coding isn't my only superpower. When I'm not battling lines of code, I'm a weekend warrior, diving headfirst into epic movies (think superheroes with mind-blowing twists and turns!). That's where the "creative alchemist" part kicks in. See, I don't just watch movies, I dissect them – the visuals, the pacing, the way they tell a story. And that passion translates into my video and photo editing. I love using color grading and smooth transitions to transform videos from raw footage into captivating stories. With photos, I'm all about bringing out the hidden details, whether it's sharpening landscapes to capture the majesty of nature or making portraits glow with a touch of digital magic.
@@ -90,10 +126,10 @@
             <br> <br>So, if you're looking for a web developer who's a coding whiz by day and a creative explorer on weekends, let's connect! I'm always up for a challenge, a good chat about movies (be prepared for some epic recommendations!), or maybe even a brainstorming session to breathe life into your next website project. After all, the best websites are the ones that combine technical skills with a sprinkle of creative flair, right?
         </p>
 
-        <label for="check" id="show" class="label">show less</label>
-        <label for="check" id="hide" class="label">show more</label>
+        <label for="check" id="show" class="label block">show less</label>
+        <label for="check" id="hide" class="label block">show more</label>
 
-        <div class="btn">
+        <div class="btn block">
             <a href="https://www.instagram.com/priyansh20.08/"><i class="fa-brands fa-instagram"></i></a>
             <a href="www.linkedin.com/in/
             priyansh-verma-1b2925273"><i class="fa-brands fa-linkedin"></i></a>
@@ -103,34 +139,34 @@
 
     <!-- -------------- qualification of the site ----------------------------------  -->
     <div class="study" id="qualification">
-        <h1>
+        <h1 class="block">
                 <i class="fa-solid fa-user-graduate"></i>
                 my <span class="quali"> qualifications</span>
         </h1>
 
 
         <ul>
-            <li style="--accent-color:#ff7b00">
+            <li style="--accent-color:#ff7b00" class="block">
                 <div class="date">2017 - 2018</div>
                 <div class="title">High School</div>
                 <div class="descr">This is where it all began! My high school years laid a strong foundation for my academic journey.</div>
             </li>
-            <li style="--accent-color:#ff7b00">
+            <li style="--accent-color:#ff7b00" class="block">
                 <div class="date">2019 - 2020</div>
                 <div class="title">Intermediate</div>
                 <div class="descr">Here, I continued to develop my academic skills and explored various subjects.</div>
             </li>
-            <li style="--accent-color:#ff7b00">
+            <li style="--accent-color:#ff7b00" class="block">
                 <div class="date">2020 - 2021</div>
                 <div class="title"> o level</div>
                 <div class="descr">My O-Levels weren't just about textbooks! I actively built a coding foundation in Python, HTML, CSS, and JavaScript, gaining the practical skills to create websites. Beyond theory, I even built a small project to solidify my learning. My curiosity then led me to explore the exciting world of IoT, where I grasped the basics of how devices connect and communicate. This experience broadened my technical skills and ignited a passion for the potential of interconnected devices to improve our lives.</div>
             </li>
-            <li style="--accent-color:#ff7b00">
+            <li style="--accent-color:#ff7b00" class="block">
                 <div class="date">2020 - 2023</div>
                 <div class="title">BSC</div>
                 <div class="descr">While my B.Sc. degree focused on a different discipline, it honed valuable skills like problem-solving, analytical thinking, and critical analysis – all crucial aspects for success in web development. These skills combined with my passion for coding have fueled my journey in this field.</div>
             </li>
-            <li style="--accent-color:#ff7b00">
+            <li style="--accent-color:#ff7b00" class="block">
                 <div class="date">2023 - Present</div>
                 <div class="title">MCA</div>
                 <div class="descr">Currently pursuing my MCA, I'm diving deeper into web development concepts like web architecture, database management, and user interface design. This program is empowering me to build robust and user-friendly websites.</div>
@@ -142,13 +178,13 @@
     <!-- ---------------- skills of the site ----------------------------------- -->
      <div class="skills" id="skills">
 
-        <h1>
+        <h1 class="block">
             <i class="fa-solid fa-graduation-cap"></i>
             my <span class="skill">skills</span>
         </h1>
 
         <div class="skillbox">
-            <div class="pack pack1">
+            <div class="pack pack1 block">
                 <h2>
                     <i class="fa-brands fa-html5"></i>
                 </h2>
@@ -156,7 +192,7 @@
                     I can turn your ideas into reality on the web! I'm skilled at building websites using HTML, the building block of most webpages. I make sure my code is clean, easy to understand, and works well on any device, like phones, tablets, and computers. Plus, I can use some cool HTML tricks to make your website more user-friendly.
                 </p>
             </div>
-            <div class="pack pack2">
+            <div class="pack pack2 block">
                 <h2>
                     <i class="fa-brands fa-css3"></i>
                 </h2>
@@ -164,7 +200,7 @@
                     I'm fluent in CSS, the magic behind a website's visual appeal. From crafting stunning color schemes and typography to building responsive layouts that adjust perfectly for any device, I can elevate your website's design. My CSS skills ensure your website looks sharp and delivers a memorable first impression.
                 </p>
             </div>
-            <div class="pack pack3">
+            <div class="pack pack3 block">
                 <h2>
                     <i class="fa-brands fa-js"></i>
                 </h2>
@@ -172,7 +208,7 @@
                     Making websites dynamic and interactive is my jam!. Whether it's creating smooth animations, building user-friendly forms, or adding interactive elements, I can take your website to the next level. My JavaScript skills ensure your website is not only visually appealing but also engaging and user-friendly.
                 </p>
             </div>
-            <div class="pack pack4">
+            <div class="pack pack4 block">
                 <h2>
                     <i class="fa-brands fa-python"></i>
                 </h2>
@@ -180,7 +216,7 @@
                     This language lets me automate all sorts of things, making my work much faster. I can use Python to analyze data (like numbers and text) in a flash, or even build websites and programs that people can use every day. Basically, Python helps me get things done efficiently and create cool stuff!
                 </p>
             </div>
-            <div class="pack pack5">
+            <div class="pack pack5 block">
                 <h2>
                     <i class="fa-brands fa-c"></i>
                 </h2>
@@ -188,7 +224,7 @@
                     I'm comfortable working with C, a powerful language that forms the foundation of many operating systems and applications. I understand its core concepts like memory management and pointers, allowing me to write efficient and reliable code.
                 </p>
             </div>
-            <div class="pack pack6">
+            <div class="pack pack6 block">
                 <h2>
                     <i class="fa-brands fa-java"></i>
                 </h2>
@@ -202,32 +238,32 @@
 
      <!-- --------------- projects of the site --------------------------------- -->
       <div class="project" id="project">
-        <h1>
+        <h1 class="block">
             <i class="fas fa-clipboard-list"></i>
             my <span class="proj">projects</span>
         </h1>
 
         <article>
             <div class="wrap wrap1">
-                <h2>
+                <h2 class="block">
                     projects that i created
                 </h2>
-                <p>
+                <p class="blockk">
                     I am an MCA student with skills in HTML, CSS, JavaScript, Tailwind, and Python. I have created projects in these areas, showcasing my ability to build responsive websites and applications. I’m eager to learn and contribute in the tech field.
                 </p>
                 <a href="https://github.com/priyanshgitthat">
-                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-github block"></i>
                 </a>
                 <a href="https://www.instagram.com/priyansh20.08/">
-                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-instagram block"></i>
                 </a>
                 <a href="www.linkedin.com/in/
                 priyansh-verma-1b2925273
                 ">
-                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-linkedin block"></i>
                 </a>
             </div>
-            <div class="wrap wrap2">
+            <div class="wrap wrap2 block">
 
                 <div class="slider">
                     <div class="imgbox">
@@ -332,44 +368,44 @@
     <!-- -------------- contact of the site ----------------------------------- -->
      <div class="contact" id="contact">
         <div class="callme">
-            <h1>
+            <h1 class="block">
                 <i class="fa-regular fa-envelope"></i> 
                 contact <span class="con">me</span>
             </h1>
             <form name="newportfoliocontact" action="https://formspree.io/f/xldrnbjj"
-            method="POST">
+            method="POST" class="block">
             <div class="container left">
 
-                <div class="inpbox">
+                <div class="inpbox block">
                     <input type="text" name="name" id="na" required autocomplete="off">
                     <label for="na">your name</label>
                 </div>
 
-                <div class="inpbox">
+                <div class="inpbox block">
                     <input type="email" name="email" id="em" required autocomplete="off">
                     <label for="em">your email</label>
                 </div>
 
-                <div class="inpbox">
+                <div class="inpbox block">
                     <input type="number" name="phone number" id="mo" required autocomplete="off">
                     <label for="mo">mobile no.</label>
                 </div>
 
-                <div class="inpbox">
+                <div class="inpbox block">
                     <input type="text" name="topic" id="sub" required autocomplete="off">
                     <label for="sub">subject</label>
                 </div>
 
             </div>
-            <div class="container right">
+            <div class="container right block">
                 <div class="querrybox">
                     <textarea name="feedback" id="querry" required></textarea>
                     <label for="querry">write your querry , what you want to ask to me</label>
                 </div>
 
                 <div class="btn">
-                    <input type="reset" value="Reset">
-                    <input type="submit" value="Send">
+                    <input type="reset" value="Reset" class="block">
+                    <input type="submit" value="Send" class="block">
                 </div>
             </div>
             </form>
@@ -379,13 +415,13 @@
     <!-- -------------------- last part of the site ---------------------------  -->
      <div class="dabba">
         <ol>
-            <li>
-                <h1>priyansh <span>v</span></h1>
+            <li class="block">
+                <h1>priyansh verma</h1>
                 <p>
                     I am passionate about technology and design. My goal is to create innovative solutions that enhance user experience and solve real problems. 
                 </p>
             </li>
-            <li>
+            <li class="block">
                 <h1>projects</h1>
                 <ul id="projectlist">
                     <li><a href="https://priyanshgitthat.github.io/Currency-Converter/">currency convertor</a></li>
@@ -394,7 +430,7 @@
                     <li><a href="https://priyanshgitthat.github.io/ImageSlider/">image slider</a></li>
                 </ul>
             </li>
-            <li>
+            <li class="block">
                 <h1>connect with me</h1>
                 <ul id="connectlist">
                     <li><a href="https://github.com/priyanshgitthat"><i class="fa-brands fa-github"></i></a></li>
@@ -403,7 +439,7 @@
                         priyansh-verma-1b2925273"><i class="fa-brands fa-linkedin"></i></a></li>
                 </ul>
             </li>
-            <li>
+            <li class="block">
                 <h1>useful links</h1>
                 <ul id="secondlist">
                     <li><a href="#home">home</a></li>
@@ -419,10 +455,35 @@
 
     <!-- ----------------------- footer of the site------------------------- -->
      <footer>
-        <p>copyright <i class="fa-regular fa-copyright"></i> priyansh verma | all rights reserved</p>
+        <p class="block">copyright <i class="fa-regular fa-copyright"></i> priyansh verma | all rights reserved</p>
      </footer>
-    <script src="./script.js">
+    <script src="./script.js" async>
     </script>
+
+<script async>
+document.addEventListener("DOMContentLoaded", function () {
+  const blocks = document.querySelectorAll('.block');
+
+  const observerOptions = {
+    threshold: 0.1 // Adjust as needed to control when the animation starts
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible'); // Add 'visible' class when in view
+      } else {
+        entry.target.classList.remove('visible'); // Remove 'visible' class when out of view
+      }
+    });
+  }, observerOptions);
+
+  blocks.forEach(block => {
+    observer.observe(block); // Keep observing each block
+  });
+});
+
+  </script>
 </body>
 
 </html>
