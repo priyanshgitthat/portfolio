@@ -100,6 +100,14 @@
 
 @media  screen and (max-width:605px) {
     .dabba{
-        height: 90vh;
+        height: unset;
+    }
+
+    .dabba ol { 
+        height: unset;
+    }
+
+    footer p{
+        font-size: 1.2rem ;
     }
 }

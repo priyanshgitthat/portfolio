@@ -149,8 +149,8 @@ input:valid ~ label{
 .querrybox textarea:focus ~ label,
 .querrybox textarea:valid ~ label{
     top:-10%;
-    font-size: 1.4rem;
-    color: #22222271;
+    font-size: 1.2rem;
+    color: #22222298;
 }
 
 @media screen and (max-width:600px) {
